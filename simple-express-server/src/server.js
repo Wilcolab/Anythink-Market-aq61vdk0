@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
-app.use(express.json()); // Enable JSON parsing
+app.use(express.json());
+
 
 app.post('/tasks', (req, res) => {
-    // Implement your logic to handle tasks
+    const task = req.body.task;
+    // Your logic for handling the task goes here
+    res.status(200).send({ message: 'Task added successfully' });
 });
 
 app.listen(8001, () => {
