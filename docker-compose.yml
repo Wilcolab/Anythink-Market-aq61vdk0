@@ -1,5 +1,4 @@
-version: '3.8'
-
+# ...existing code...
 services:
   python-server:
     build:
@@ -19,4 +18,5 @@ services:
     volumes:
       - ./simple-express-server/src:/app/src
       - ./simple-express-server/package.json:/app/package.json
-      - ./simple-express-
+      - ./simple-express-server/yarn.lock:/app/yarn.lock
+# ...existing code...
