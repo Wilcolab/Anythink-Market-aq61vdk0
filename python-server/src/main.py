@@ -6,10 +6,16 @@ app = FastAPI()
 class Task(BaseModel):
     text: str
 
-tasks = ["Write a diary entry from the future", "Create a time machine from a cardboard box", "Plan a trip to the dinosaurs", "Draw a futuristic city", "List items to bring on a time-travel adventure"]
+tasks = [
+    "Write a diary entry from the future",
+    "Create a time machine from a cardboard box",
+    "Plan a trip to the dinosaurs",
+    "Draw a futuristic city",
+    "List items to bring on a time-travel adventure"
+]
 
 @app.get("/")
-def get_tasks():
+def root():
     return "Hello World"
 
 @app.post("/tasks")
