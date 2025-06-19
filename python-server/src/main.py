@@ -14,15 +14,15 @@ tasks = [
     "List items to bring on a time-travel adventure"
 ]
 
-@app.get("/")
+app.get("/")
 def root():
     return "Hello World"
 
-@app.post("/tasks")
+app.post("/tasks")
 def add_task(task: Task):
     tasks.append(task.text)
     return {"message": "Task added successfully"}
 
-@app.get("/tasks")
+app.get("/tasks")
 def get_tasks():
     return {"tasks": tasks}
